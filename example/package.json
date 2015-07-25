@@ -1,0 +1,32 @@
+{
+  "name": "react-tourist-example",
+  "description": "Example page for React Tourist",
+  "version": "0.0.1",
+  "scripts": {
+    "example": "export NODE_ENV=dev; webpack-dev-server --hot --progress --colors --content-base src/www",
+    "build": "export NODE_ENV=production; webpack -p",
+    "build-example": "git checkout master; npm run build; git add src/www && git commit -m \"commit build example\"; git push; git subtree split --prefix src/www -b gh-pages; git push -f origin gh-pages:gh-pages; git branch -D gh-pages",
+  },
+  "dependencies": {
+    "react": ">=0.13",
+    "react-router": ">=0.13"
+  },
+  "devDependencies": {
+    "babel-core": "^5.6.18",
+    "babel-eslint": "^3.1.23",
+    "babel-loader": "^5.3.1",
+    "codemirror": "^5.5.0",
+    "css-loader": "^0.15.2",
+    "eslint": "^0.24.1",
+    "eslint-plugin-babel": "^1.1.0",
+    "eslint-plugin-react": "^2.7.0",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "file-loader": "^0.8.4",
+    "http-server": "^0.8.0",
+    "jsx-loader": "^0.13.2",
+    "node-libs-browser": "^0.5.2",
+    "react-hot-loader": "^1.2.8",
+    "webpack": "^1.10.1",
+    "webpack-dev-server": "^1.10.1"
+  }
+}

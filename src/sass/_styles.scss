@@ -1,0 +1,17 @@
+
+.tourist-backdrop {
+  animation: fadeIn 0.25s ease-in-out;
+  z-index: $z-overlay;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  text-align: center;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.simple-tour-item-button:hover {
+  opacity: 0.8;
+}

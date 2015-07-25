@@ -1,0 +1,76 @@
+
+body {
+  font-family: 'Helvetica';
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  background: #2c3e50;
+  padding: 1em;
+  color: #ecf0f1;
+  position: fixed;
+  width: calc(100% - 2em);
+  height: 8em;
+  z-index: 100;
+}
+
+.page {
+  margin-bottom: 100px;
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 10em;
+}
+
+
+.page .step {
+  padding-bottom: 1em;
+  margin-bottom: 4em;
+  text-align: center;
+}
+
+.page .step-header {
+  margin-bottom: 0.5em;
+}
+
+
+.page p {
+  text-align: center;
+  padding: 0.5em;
+  margin: 0.5em 4em;
+}
+
+button {
+  background: #e74c3c;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 1.1em;
+  padding: 0.4em 0.8em;
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+
+button:hover {
+  background: #c0392b;
+}
+
+.cm-s-solarized.CodeMirror {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.highlight, .code-toggle.open {
+  background-color: #fdf6e3;
+}
+
+.cm-s-solarized .cm-comment { color: #93a1a1; }
+
+.CodeMirror, .CodeMirror-scroll {
+  height: auto !important;
+}

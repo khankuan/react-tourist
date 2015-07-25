@@ -1,0 +1,40 @@
+{
+  "name": "react-tourist",
+  "version": "0.0.1",
+  "main": "./lib",
+  "scripts": {
+    "build": "export NODE_ENV=production; webpack -p",
+    "prepublish": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=0.13"
+  },
+  "dependencies": {},
+  "keywords": [
+    "react",
+    "tour guide"
+  ],
+  "devDependencies": {
+    "autoprefixer-core": "^5.2.1",
+    "autoprefixer-loader": "^2.0.0",
+    "babel-core": "^5.6.18",
+    "babel-eslint": "^3.1.23",
+    "babel-loader": "^5.3.1",
+    "css-loader": "^0.15.2",
+    "eslint": "^0.24.1",
+    "eslint-plugin-babel": "^1.1.0",
+    "eslint-plugin-react": "^2.7.0",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "file-loader": "^0.8.4",
+    "http-server": "^0.8.0",
+    "jsx-loader": "^0.13.2",
+    "node-libs-browser": "^0.5.2",
+    "node-sass": "^3.2.0",
+    "react-hot-loader": "^1.2.8",
+    "sass-loader": "^1.0.2",
+    "style-loader": "^0.12.3",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.10.1",
+    "webpack-dev-server": "^1.10.1"
+  }
+}
