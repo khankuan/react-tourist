@@ -4,8 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "example": "export NODE_ENV=dev; webpack-dev-server --hot --progress --colors --content-base src/www",
-    "build": "export NODE_ENV=production; webpack -p",
-    "build-example": "git checkout master; npm run build; git add src/www && git commit -m \"commit build example\"; git push; git subtree split --prefix src/www -b gh-pages; git push -f origin gh-pages:gh-pages; git branch -D gh-pages",
+    "build": "export NODE_ENV=production; webpack -p"
   },
   "dependencies": {
     "react": ">=0.13",
