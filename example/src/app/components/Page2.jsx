@@ -98,7 +98,7 @@ const Page2 = React.createClass({
         <div className='step'>
           <h4 className='step-header'>We're done!</h4>
           <p>
-            That's all! Back to <a href='/#/page1'>page 1</a>.
+            That's all! Back to <a href='#/page1'>page 1</a>.
           </p>
         </div>
 

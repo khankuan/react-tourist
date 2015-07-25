@@ -124,7 +124,7 @@ const Page1 = React.createClass({
         <div className='step'>
           <h4 className='step-header'>Next..</h4>
           <p>
-            In step 6, we will demo a tour item for a newly mounted component. Go to <a href='/#/page2'>page 2</a>.
+            In step 6, we will demo a tour item for a newly mounted component. Go to <a href='#/page2'>page 2</a>.
           </p>
         </div>
 
