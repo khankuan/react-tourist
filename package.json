@@ -1,6 +1,12 @@
 {
   "name": "react-tourist",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "author": "Chua Wei Kuan <khankuan@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "khankuan/react-tourist"
+  },
   "main": "./lib",
   "scripts": {
     "build": "export NODE_ENV=production; webpack -p",
