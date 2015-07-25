@@ -1,5 +1,5 @@
 import React from 'react';
-import Tour from '../../../lib/react-tourist';
+import Tour from 'react-tourist';
 
 import CustomTourItem from './components/CustomTourItem.jsx';
 
