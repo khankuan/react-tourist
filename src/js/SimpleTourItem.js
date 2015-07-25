@@ -33,7 +33,7 @@ class SimpleTourItem extends React.Component {
           className='simple-tour-item-button'
           style={buttonStyle}
           onClick={this.props.onDone}>
-          Close
+          Next
         </span>
 
       </div>
