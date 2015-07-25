@@ -1,5 +1,5 @@
 # React Tourist
-A library for in-app tour guide in React.
+A library for in-app tour guide in React. Checkout the [example](http://khankuan.github.io/react-tourist) page.
 
 
 ## Creating a tour

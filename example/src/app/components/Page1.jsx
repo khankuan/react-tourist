@@ -71,7 +71,7 @@ const Page1 = React.createClass({
           // Step 4
         }
         <div className='step'>
-          <h4 className='step-header'>Step 4: Pulse style Indicator with overwrites</h4>
+          <h4 className='step-header'>Step 4: Cover style Indicator with overwrites</h4>
           <p ref='step4'>
             Overwriting allows you to tweak the built-in indicators, such as changing the indicator background color.
           </p>
