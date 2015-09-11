@@ -13,9 +13,9 @@ const myTour = new Tour(tourItems);
 ```
 
 ## Tour methods
-Start
+Start (and automatically show tour)
 ```js
-myTour.start();
+myTour.start({_auto: true, cb: function(){ alert('Tour completed!') }});
 ```
 
 Trigger next item programmatically. For custom ([See more](#Tour item)), the onDone prop is passed in to the element. You can use that as an alternative to trigger the next action.

@@ -153,7 +153,7 @@ class Tour {
 
   _getStepMountNode (step) {
     try {
-      const getElement = step.getElement || (x => { return x.getDOMNode(); });
+      const getElement = step.getElement || (x => { return React.findDOMNode(x); });
       return getElement(this._tourables[step.component].refs[step.ref]);
     } catch (err){
       return null;

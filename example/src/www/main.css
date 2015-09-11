@@ -14,6 +14,7 @@ body {
   width: calc(100% - 2em);
   height: 8em;
   z-index: 100;
+  transition: all 0.5s ease;
 }
 
 .page {
