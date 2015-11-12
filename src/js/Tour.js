@@ -6,6 +6,7 @@ import { withTour } from './lib';
 
 let globalPendingTours = [];
 let globalTouring = null;
+const hasDocument = typeof document !== undefined;
 
 class Tour {
 
@@ -16,15 +17,22 @@ class Tour {
     this._pending = false;  //  If item not rendered and waiting
 
     //  Add tour div
-    this._tourDiv = document.createElement('div');
-    document.body.appendChild(this._tourDiv);
+    if (hasDocument) {
+      this._tourDiv = document.createElement('div');
+      document.body.appendChild(this._tourDiv);
+    }
 
     //  Generate mixin
     this._generateMixin();
+    this.withTour = this.withTour.bind(this);
   }
 
   register (component) {
-    const name = component.constructor.name || component.name;
+    if (!hasDocument) {
+      return;
+    }
+
+    const name = component.constructor.displayName || component.constructor.name || component.name;
     this._tourables[name] = component;
     if (this._pending){
       this._checkRender();
@@ -32,7 +40,11 @@ class Tour {
   }
 
   deregister (component) {
-    const name = component.constructor.name || component.name;
+    if (!hasDocument) {
+      return;
+    }
+
+    const name = component.constructor.displayName || component.constructor.name || component.name;
     delete this._tourables[name];
 
     //  Retract if current component is dead and gone
@@ -41,7 +53,7 @@ class Tour {
     }
   }
 
-  withTour = (component) => {
+  withTour (component) {
     return withTour(component, this);
   }
 

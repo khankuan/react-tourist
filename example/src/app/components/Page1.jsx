@@ -2,8 +2,9 @@ import React from 'react';
 import { myTour } from '../my-tour';
 import CodeExample from './CodeExample.jsx';
 
-@myTour.withTour
-export default class Page1 extends React.Component {
+class Page1 extends React.Component {
+
+  static displayName = 'Page1'
 
   render() {
     return (
@@ -18,13 +19,13 @@ export default class Page1 extends React.Component {
             Indicators are used to catch user's attaction for the next tour item. Built-in ones are provided. The default style is <em>cover</em>.
           </p>
           <CodeExample codeText={`
-            {
-              //  Step 1 - Cover indicator
-              component: 'Page1',
-              ref: 'step1',
-              content: 'Example of a \'cover\' (also default) style indicator',
-              getStyle: Tour.IndicatorStyles.cover
-            }
+            {\r\r
+              //  Step 1 - Cover indicator\r
+              component: 'Page1',\r
+              ref: 'step1',\r
+              content: 'Example of a "cover" (also default) style indicator',\r
+              getStyle: Tour.IndicatorStyles.cover\r\r
+            }\r
           `} />
         </div>
 
@@ -36,13 +37,13 @@ export default class Page1 extends React.Component {
           <p ref='step2'>
             Alternative indicator style.
           </p>
-          <CodeExample codeText={`
-            {
-              //  Step 2 - Box indicator
-              component: 'Page1',
-              ref: 'step2',
-              content: 'Example of a \'box\' style indicator',
-              getStyle: Tour.IndicatorStyles.box
+          <CodeExample codeText={`\r
+            {\r\r
+              //  Step 2 - Box indicator\r
+              component: 'Page1',\r
+              ref: 'step2',\r
+              content: 'Example of a "box" style indicator',\r
+              getStyle: Tour.IndicatorStyles.box\r\r
             }
           `} />
         </div>
@@ -56,12 +57,12 @@ export default class Page1 extends React.Component {
             Alternative indicator style.
           </p>
           <CodeExample codeText={`
-            {
-              //  Step 3 - Pulse indicator
-              component: 'Page1',
-              ref: 'step3',
-              content: 'Example of a \'pulse\' style indicator. Note that vertical/horizontal alignment can be changed (check docs).',
-              getStyle: Tour.IndicatorStyles.pulse
+            {\r\r
+              //  Step 3 - Pulse indicator\r
+              component: 'Page1',\r
+              ref: 'step3',\r
+              content: 'Example of a "pulse" style indicator. Note that vertical/horizontal alignment can be changed (check docs).',\r
+              getStyle: Tour.IndicatorStyles.pulse\r\r
             }
           `} />
         </div>
@@ -75,13 +76,13 @@ export default class Page1 extends React.Component {
             Overwriting allows you to tweak the built-in indicators, such as changing the indicator background color.
           </p>
           <CodeExample codeText={`
-            {
-              //  Step 4 - Cover indicator overwritten
-              component: 'Page1',
-              ref: 'step4',
-              content: 'Example of a \'cover\' style indicator that is overwritten.',
-              getStyle: Tour.IndicatorStyles.cover.overwrite({background: '#2980b9'})
-            }
+            {\r\r
+              //  Step 4 - Cover indicator overwritten\r
+              component: 'Page1',\r
+              ref: 'step4',\r
+              content: 'Example of a "cover" style indicator that is overwritten.',\r
+              getStyle: Tour.IndicatorStyles.cover.overwrite({background: '#2980b9'})\r
+            }\r
           `} />
         </div>
 
@@ -94,25 +95,25 @@ export default class Page1 extends React.Component {
             Sometimes you may want your own indicator style. You can pass in a function instead for <em>getStyle</em>. The mounted node (the ref node) will be passed in. You can use it for calculations etc if required.
           </p>
          <CodeExample codeText={`
-            {
-              //  Step 5 - Custom indicator
-              component: 'Page1',
-              ref: 'step5',
-              alignY: 'top',
-              content: 'Example of a custom style indicator.',
-              getStyle: mountNode => {  //  Underlines the component
-                return {
-                  width: '16px',
-                  height: '16px',
-                  marginLeft: '-10px',
-                  marginTop: '-10px',
-                  backgroundColor: 'red',
-                  border: '3px solid #444',
-                  borderRadius: '100%',
-                  cursor: 'pointer',
-                  zIndex: '10000000',
-                  position: 'absolute'
-                };
+            {\r\r
+              //  Step 5 - Custom indicator\r
+              component: 'Page1',\r
+              ref: 'step5',\r
+              alignY: 'top',\r
+              content: 'Example of a custom style indicator.',\r
+              getStyle: mountNode => {  //  Underlines the component\r
+                return {\r
+                  width: '16px',\r
+                  height: '16px',\r
+                  marginLeft: '-10px',\r
+                  marginTop: '-10px',\r
+                  backgroundColor: 'red',\r
+                  border: '3px solid #444',\r
+                  borderRadius: '100%',\r
+                  cursor: 'pointer',\r
+                  zIndex: '10000000',\r
+                  position: 'absolute'\r
+                };\r\r
             }
           `} />
         </div>
@@ -131,3 +132,7 @@ export default class Page1 extends React.Component {
     );
   }
 }
+
+//  TODO: Using this because of bug in babel: https://github.com/babel/babel/issues/2702
+export default myTour.withTour(Page1);
+

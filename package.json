@@ -1,6 +1,6 @@
 {
   "name": "react-tourist",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Chua Wei Kuan <khankuan@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -21,19 +21,20 @@
   "peerDependencies": {
     "react": "^0.14.2"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "keywords": [
     "react",
     "tour guide"
   ],
   "devDependencies": {
-    "babel-loader": "^5.3.3",
     "autoprefixer-core": "^5.2.1",
     "autoprefixer-loader": "^2.0.0",
-    "babel-core": "^6.1.2",
+    "babel-core": "^6.1.4",
     "babel-eslint": "^3.1.23",
-    "babel-loader": "^5.3.1",
+    "babel-loader": "^6.1.0",
+    "babel-preset-es2015": "^6.1.4",
+    "babel-preset-react": "^6.1.4",
+    "babel-preset-stage-1": "^6.1.2",
     "css-loader": "^0.15.2",
     "eslint": "^0.24.1",
     "eslint-plugin-babel": "^1.1.0",
