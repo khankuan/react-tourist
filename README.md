@@ -48,6 +48,7 @@ Or es6
 ```js
 @myTour.withTour
 class ExampleDiv1 extends React.Component {
+  static displayName = 'EvampleDiv1'  //  This is important for production mode
   render: function(){
     return (
       <h4 ref='header'>Hello world div!</h4>
