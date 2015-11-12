@@ -15,8 +15,8 @@ module.exports = {
         loaders: getLoaders(['jsx', 'babel']),
         exclude: /node_modules/
       }, {
-        test: /\.css$/,
-        loader: 'style!css'
+        test: /\.s?css/,
+        loader: 'style!css!autoprefixer!sass'
       }
     ]
   },

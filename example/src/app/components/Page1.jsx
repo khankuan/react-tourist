@@ -2,9 +2,8 @@ import React from 'react';
 import { myTour } from '../my-tour';
 import CodeExample from './CodeExample.jsx';
 
-const Page1 = React.createClass({
-
-  mixins: [myTour.mixin],
+@myTour.withTour
+export default class Page1 extends React.Component {
 
   render() {
     return (
@@ -131,6 +130,4 @@ const Page1 = React.createClass({
       </div>
     );
   }
-});
-
-export default Page1;
+}

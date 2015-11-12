@@ -2,7 +2,7 @@ import React from 'react';
 import SimpleTourItem from './SimpleTourItem';
 import TourIndicator from './TourIndicator';
 import TourIndicatorStyles from './TourIndicatorStyles';
-import {becomeTourable} from './lib';
+import { withTour } from './lib';
 
 let globalPendingTours = [];
 let globalTouring = null;
@@ -24,7 +24,7 @@ class Tour {
   }
 
   register (component) {
-    const name = component.constructor.displayName || component.name;
+    const name = component.constructor.name || component.name;
     this._tourables[name] = component;
     if (this._pending){
       this._checkRender();
@@ -32,7 +32,7 @@ class Tour {
   }
 
   deregister (component) {
-    const name = component.constructor.displayName || component.name;
+    const name = component.constructor.name || component.name;
     delete this._tourables[name];
 
     //  Retract if current component is dead and gone
@@ -41,8 +41,8 @@ class Tour {
     }
   }
 
-  becomeTourable (component){
-    return becomeTourable(component, this);
+  withTour = (component) => {
+    return withTour(component, this);
   }
 
   start (opts) {
@@ -271,6 +271,7 @@ class Tour {
     const tourIndicator = (
       <TourIndicator
         style={style}
+        className={step.className}
         onClick={this._prepareMountTourItem.bind(this)} />
     );
 

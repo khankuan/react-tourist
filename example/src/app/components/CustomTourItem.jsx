@@ -1,10 +1,10 @@
 import React from 'react';
 
-const CustomTourItem = React.createClass({
+export default class CustomTourItem extends React.Component {
 
-  propTypes: {
+  static propTypes = {
     onDone: React.PropTypes.func
-  },
+  }
 
   render() {
     const divStyle = {
@@ -27,7 +27,5 @@ const CustomTourItem = React.createClass({
       </div>
     );
   }
-});
+}
 
-
-export default CustomTourItem;

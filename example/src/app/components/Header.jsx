@@ -1,8 +1,7 @@
 import React from 'react';
 import { myTour } from '../my-tour';
-import {RouteHandler} from 'react-router';
 
-class Header extends React.Component {
+export default class Header extends React.Component {
 
   constructor (){
     super();
@@ -35,12 +34,10 @@ class Header extends React.Component {
             {this.state.completed ? 'Restart Tour' : 'Start Tour'}
           </button>
         </div>
-        <RouteHandler />
+        { this.props.children }
       </div>
     );
   }
 
 }
 
-
-export default Header;

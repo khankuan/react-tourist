@@ -1,4 +1,4 @@
 //  Load the styles
 import './sass/index.scss';
 
-export * from './js/Tour';
+export default from './js/Tour';

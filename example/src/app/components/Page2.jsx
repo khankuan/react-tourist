@@ -2,15 +2,14 @@ import React from 'react';
 import { myTour } from '../my-tour';
 import CodeExample from './CodeExample.jsx';
 
-const Page2 = React.createClass({
-
-  mixins: [myTour.mixin],
+@myTour.withTour
+export default class Page2 extends React.Component {
 
   onDone (){
     if (window.myCallback){
       window.myCallback();
     }
-  },
+  }
 
   render() {
     return (
@@ -106,7 +105,5 @@ const Page2 = React.createClass({
       </div>
     );
   }
-});
-
-export default Page2;
+}
 

@@ -1,8 +1,6 @@
-import {merge} from '../helpers';
-
 function box (style) {
   return mountNode => {
-    return merge({
+    return {
       width: '100%',
       height: '100%',
       left: 0,
@@ -13,8 +11,9 @@ function box (style) {
       border: '4px solid red',
       marginTop: '-4px',
       marginLeft: '-4px',
-      cursor: 'pointer'
-    }, style);
+      cursor: 'pointer',
+      ...style
+    };
   };
 }
 

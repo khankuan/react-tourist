@@ -1,8 +1,6 @@
-import {merge} from '../helpers';
-
 function cover (style) {
   return mountNode => {
-    return merge({
+    return {
       width: '100%',
       height: '100%',
       left: 0,
@@ -12,8 +10,9 @@ function cover (style) {
       WebkitAnimation: 'glow 1s infinite ease-out',
       MozAnimation: 'glow 1s infinite ease-out',
       background: 'red',
-      cursor: 'pointer'
-    }, style);
+      cursor: 'pointer',
+      ...style
+    };
   };
 }
 

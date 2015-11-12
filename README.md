@@ -6,8 +6,8 @@ A library for in-app tour guide in React. Checkout the [example](http://khankuan
 ```js
 import Tour from 'react-tourist';
 const tourItems = [
-  {component: 'ExampleDiv1', ref: 'header', content: 'Hello World!'},
-  {component: 'ExampleDiv2', ref: 'header', content: 'Bye World!'}
+  { component: 'ExampleDiv1', ref: 'header', content: 'Hello World!' },
+  { component: 'ExampleDiv2', ref: 'header', content: 'Bye World!' }
 ];
 const myTour = new Tour(tourItems);
 ```
@@ -15,7 +15,10 @@ const myTour = new Tour(tourItems);
 ## Tour methods
 Start (and automatically show tour)
 ```js
-myTour.start({_auto: true, cb: function(){ alert('Tour completed!') }});
+myTour.start({
+  _auto: true,
+  cb: () => { alert('Tour completed!') }
+});
 ```
 
 Trigger next item programmatically. For custom ([See more](#Tour item)), the onDone prop is passed in to the element. You can use that as an alternative to trigger the next action.
@@ -41,21 +44,9 @@ myTour.skip();
 ## Setting up React Components
 Component displayName and refs are used to target the particular tour element.
 
-```js
-React.createClass({
-  displayName: 'ExampleDiv1',
-  mixins: [myTour.mixin],
-  render: function(){
-    return (
-      <h4 ref='header'>Hello world div!</h4>
-    );
-  }
-});
-```
-
 Or es6
 ```js
-import Tour from 'react-tourist';
+@myTour.withTour
 class ExampleDiv1 extends React.Component {
   render: function(){
     return (
@@ -63,7 +54,7 @@ class ExampleDiv1 extends React.Component {
     );
   }
 }
-expoxt const Tour.becomeTourable(ExampleDiv1);
+expoxt const ExampleDiv1;
 ```
 
 ## Tour item

@@ -1,10 +1,7 @@
-import {merge} from '../helpers';
-
-
 export function makePulse (alignX='center', alignY='center') {
   function pulseWithStyle(mergeStyle){
     return mountNode => {
-      const style = merge({
+      const style = {
         width: '60px',
         height: '60px',
         marginLeft: '-30px',
@@ -16,8 +13,9 @@ export function makePulse (alignX='center', alignY='center') {
         borderRadius: '100%',
         cursor: 'pointer',
         zIndex: '10000000',
-        position: 'absolute'
-      }, mergeStyle);
+        position: 'absolute',
+        ...style
+      };
 
       const rect = mountNode.getBoundingClientRect();
 
