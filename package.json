@@ -19,7 +19,7 @@
     "build-example": "git checkout master; cd example; npm run build; cd ..; git add example/src/www && git commit -m \"commit build example\"; git push; git subtree split --prefix example/src/www -b gh-pages; git push -f origin gh-pages:gh-pages; git branch -D gh-pages"
   },
   "peerDependencies": {
-    "react": "^0.14.2"
+    "react": "^0.14.0 || ^15.0.0"
   },
   "dependencies": {},
   "keywords": [
